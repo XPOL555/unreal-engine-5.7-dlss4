@@ -31,3 +31,4 @@
 ## Acknowledgements
 - NVIDIA for the original DLSS 4 plugin and sample project targeting UE 5.6.
 - Epic Games for Unreal Engine.
+- [Altercode Team](https://altercode.dev/?ref=github_dlss4_ue57), aka me 
