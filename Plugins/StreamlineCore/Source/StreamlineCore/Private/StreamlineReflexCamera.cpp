@@ -186,11 +186,7 @@ void DumpActor(const TCHAR* Stage, const AActor* Actor)
 						*LocalToWorld.ToString(), *LateUpdateMatrix.ToString()
 					);
 				
-					if (!SceneProxy->IsDrawnInGame()
-#if RHI_RAYTRACING
-					    || !SceneInfo->bDrawInGame
-#endif
-						)
+					if (!SceneProxy->IsDrawnInGame())
 
 					{
 						bIsPrimitiveComponent = false;

@@ -396,7 +396,7 @@ bool FStreamlineMaxTickRateHandler::HandleMaxTickRate(float DesiredMaxTickRate)
 		UpdateReflexOptionsIfChanged(ReflexOptions);
 
 		TRACE_CPUPROFILER_EVENT_SCOPE(ReflexSleep);
-		FThreadIdleStats::FScopeIdle Scope;
+		UE::Stats::FThreadIdleStats::FScopeIdle Scope;
 
 		sl::FrameToken* FrameToken = FStreamlineCoreModule::GetStreamlineRHI()->GetFrameToken(GFrameCounter);
 		sl::Result Result = CALL_SL_FEATURE_FN(sl::kFeatureReflex, slReflexSleep, *FrameToken);

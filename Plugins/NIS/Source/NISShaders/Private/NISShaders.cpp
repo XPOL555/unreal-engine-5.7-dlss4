@@ -327,7 +327,7 @@ struct FNISCoefficients : public FRenderResource
 				.SetNumMips(1)
 				.SetNumSamples(1)
 				.SetFlags(TexCreate_None)
-				.SetBulkData(&BulkData);
+				.SetInitActionBulkData(&BulkData);
 			ScalerRHI = RHICreateTexture(ScalerDesc);
 #else
 			FRHIResourceCreateInfo CreateInfo(TEXT("FNISCoefficients::Scaler"));
@@ -348,7 +348,7 @@ struct FNISCoefficients : public FRenderResource
 				.SetNumMips(1)
 				.SetNumSamples(1)
 				.SetFlags(TexCreate_None)
-				.SetBulkData(&BulkData);
+				.SetInitActionBulkData(&BulkData);
 			UsmRHI = RHICreateTexture(UsmDesc);
 #else
 			FRHIResourceCreateInfo CreateInfo(TEXT("FNISCoefficients::Usm"));
@@ -370,7 +370,7 @@ struct FNISCoefficients : public FRenderResource
 				.SetNumMips(1)
 				.SetNumSamples(1)
 				.SetFlags(TexCreate_None)
-				.SetBulkData(&BulkData);
+				.SetInitActionBulkData(&BulkData);
 			ScalerHalfPrecisionRHI = RHICreateTexture(ScalerHalfDesc);
 #else
 			FRHIResourceCreateInfo CreateInfo(TEXT("FNISCoefficients::ScalerHalfPrecision"));
@@ -391,7 +391,7 @@ struct FNISCoefficients : public FRenderResource
 				.SetNumMips(1)
 				.SetNumSamples(1)
 				.SetFlags(TexCreate_None)
-				.SetBulkData(&BulkData);
+				.SetInitActionBulkData(&BulkData);
 			UsmHalfPrecisionRHI = RHICreateTexture(UsmHalfDesc);
 #else
 			FRHIResourceCreateInfo CreateInfo(TEXT("FNISCoefficients::UsmHalfPrecision"));
